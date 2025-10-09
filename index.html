@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Printing Inventory 1.0</title>
+    <title>Printing Inventory 1.1</title>
     
 
   </head>
@@ -583,7 +583,7 @@
                     </div>
                     <div class="w3-half">
                         <div class="w3-card w3-pale-green w3-padding w3-round">
-                            <div class="w3-text-green w3-xxlarge w3-margin-bottom">📊</div>
+                            <div class="w3-text-green w3-xxxlarge w3-margin-bottom">📊</div>
                             <h3 class="w3-text-dark-grey w3-large w3-margin-bottom">Recent Records</h3>
                             <p class="w3-text-grey">View and print saved challans and bills</p>
                             <button onclick="showPage('recent')" class="w3-button w3-green w3-round w3-margin-top">
@@ -918,6 +918,19 @@
                 </thead>
                 <tbody id="printItemsTableBody">
                 </tbody>
+                <!-- FIXED: Added table footer for grand totals -->
+                <tfoot id="printTableFooter">
+                    <tr style="font-weight: bold;">
+                        <td colspan="6" style="text-align: center;">GRAND TOTAL</td>
+                        <td id="printTotalKg">0.00</td>
+                        <td id="printTotalYds">0.00</td>
+                        <td></td> <!-- Bag -->
+                        <td class="rate-amount-col"></td> <!-- Rate -->
+                        <td class="rate-amount-col" id="printGrandTotalAmount"></td> <!-- Amount -->
+                        <td class="rate-amount-col"></td> <!-- Currency -->
+                        <td></td> <!-- Remarks -->
+                    </tr>
+                </tfoot>
             </table>
             
             <div style="text-align: right; margin: 8px 0; font-size: 11px;">
@@ -1683,6 +1696,26 @@
                     <td>${item.remarks || ''}</td>
                 </tr>
             `).join('');
+            
+            // FIXED: Calculate totals for challan and create footer HTML
+            let totalKg = 0;
+            let totalYds = 0;
+            record.items.forEach(item => {
+                totalKg += parseFloat(item.kg) || 0;
+                totalYds += parseFloat(item.yds) || 0;
+            });
+
+            const footerHtml = `
+            <tfoot>
+                <tr style="font-weight: bold; background-color: #f0f0f0;">
+                    <td style="border: 1px solid #333; padding: 6px; text-align: center;" colspan="6">GRAND TOTAL</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${totalKg.toFixed(2)}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${totalYds.toFixed(2)}</td>
+                    <td style="border: 1px solid #333; padding: 6px;"></td>
+                    <td style="border: 1px solid #333; padding: 6px;"></td>
+                </tr>
+            </tfoot>
+            `;
 
             return `
                 <div style="background: white; padding: 20px; margin: 0; border: 1px solid #333; font-family: Times New Roman, sans-serif; font-size: 14px; min-height: 400px;">
@@ -1734,6 +1767,7 @@
                         <tbody>
                             ${itemsRows.replace(/td>/g, 'td style="border: 1px solid #333; padding: 6px; text-align: left;">')}
                         </tbody>
+                        ${footerHtml}
                     </table>
                     
                     <div style="font-size: 12px; margin: 15px 0;">
@@ -1798,6 +1832,17 @@
                     <td>${item.remarks || ''}</td>
                 </tr>
             `).join('');
+
+            // FIXED: Calculate and populate footer for the bill
+            let totalKg = 0;
+            let totalYds = 0;
+            record.items.forEach(item => {
+                totalKg += parseFloat(item.kg) || 0;
+                totalYds += parseFloat(item.yds) || 0;
+            });
+            document.getElementById('printTotalKg').textContent = totalKg.toFixed(2);
+            document.getElementById('printTotalYds').textContent = totalYds.toFixed(2);
+            document.getElementById('printGrandTotalAmount').textContent = `${record.currency === 'USD' ? '$' : '৳'}${record.totalAmount}`;
             
             const currencySymbol = record.currency === 'USD' ? '$' : '৳';
             const currencyName = record.currency === 'USD' ? 'Dollars' : 'Taka';
@@ -1815,11 +1860,18 @@
             
             // Show amount in words section for bill
             document.getElementById('amountInWordsSection').style.display = 'block';
+
+            // FIXED: Hide the old total amount paragraph since it's now in the table footer
+            const oldTotalAmountP = document.querySelector('#printTemplate .rate-amount-col strong').parentElement;
+            oldTotalAmountP.style.display = 'none';
             
             // Show print template and print
             document.getElementById('printTemplate').style.display = 'block';
             window.print();
             document.getElementById('printTemplate').style.display = 'none';
+
+            // FIXED: Restore the display of the old total amount paragraph
+            oldTotalAmountP.style.display = 'block';
         }
 
         // Edit record function
