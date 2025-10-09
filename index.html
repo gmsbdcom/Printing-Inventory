@@ -3,11 +3,22 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Printing Inventory 1.1</title>
+    <title>printing inventory1.3333</title>
     
 
   </head>
     
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Printing Inventory 1.1</title>
+
+
+  </head>
+
   <body>
   <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +32,7 @@
         body {
             box-sizing: border-box;
         }
-        
+
         /* Login Page Styles */
         .login-page {
             position: fixed;
@@ -35,7 +46,7 @@
             align-items: center;
             z-index: 2000;
         }
-        
+
         .login-page::before {
             content: '';
             position: absolute;
@@ -47,7 +58,7 @@
             filter: blur(2px);
             opacity: 0.3;
         }
-        
+
         .login-card {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -60,12 +71,12 @@
             z-index: 1;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .company-logo-section {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         .company-title {
             font-size: 24px;
             font-weight: bold;
@@ -73,22 +84,22 @@
             margin-bottom: 10px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         .company-subtitle {
             font-size: 14px;
             color: #7f8c8d;
             margin-bottom: 20px;
         }
-        
+
         .login-form {
             width: 100%;
         }
-        
+
         .input-group {
             margin-bottom: 20px;
             position: relative;
         }
-        
+
         .input-label {
             display: block;
             font-size: 14px;
@@ -98,7 +109,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .login-input {
             width: 100%;
             padding: 15px 20px;
@@ -109,25 +120,25 @@
             background: rgba(255, 255, 255, 0.9);
             box-sizing: border-box;
         }
-        
+
         .login-input:focus {
             outline: none;
             border-color: #3498db;
             box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
             background: rgba(255, 255, 255, 1);
         }
-        
+
         .login-input::placeholder {
             color: #bdc3c7;
         }
-        
+
         .button-group {
             margin-top: 30px;
             display: flex;
             gap: 15px;
             flex-direction: column;
         }
-        
+
         .login-btn {
             padding: 15px 30px;
             border: none;
@@ -140,42 +151,42 @@
             letter-spacing: 0.5px;
             width: 100%;
         }
-        
+
         .login-btn-primary {
             background: linear-gradient(135deg, #27ae60, #2ecc71);
             color: white;
             box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
         }
-        
+
         .login-btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
         }
-        
+
         .login-btn-secondary {
             background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
             box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
         }
-        
+
         .login-btn-secondary:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
         }
-        
+
         .login-footer {
             text-align: center;
             margin-top: 30px;
             padding-top: 20px;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
-        
+
         .login-footer p {
             color: #7f8c8d;
             font-size: 12px;
             margin: 0;
         }
-        
+
         .page-section {
             display: none;
         }
@@ -185,7 +196,7 @@
         .nav-gradient {
             background: linear-gradient(135deg, #2196F3, #1976D2);
         }
-        
+
         /* Print Styles */
         @media print {
             body * {
@@ -204,7 +215,7 @@
                 display: none !important;
             }
         }
-        
+
         .print-template {
             background: white;
             padding: 10px;
@@ -213,25 +224,25 @@
             font-family: Times New Roman, sans-serif;
             font-size: 12px;
         }
-        
+
         .company-header {
             text-align: center;
             padding-bottom: 8px;
             margin-bottom: 10px;
         }
-        
+
         .company-logo {
             max-width: 80px;
             height: auto;
         }
-        
+
         .document-title {
             font-size: 16px;
             font-weight: bold;
             margin: 8px 0;
             text-align: center;
         }
-        
+
         .info-section {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -239,49 +250,49 @@
             margin: 8px 0;
             font-size: 11px;
         }
-        
+
         .signature-section {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             padding-top: 10px;
         }
-        
+
         .signature-box {
             text-align: center;
             width: 18%;
         }
-        
+
         .signature-line {
             margin-top: 35px;
             font-size: 10px;
             padding-top: 8px;
             border-top: 1px solid #333;
         }
-        
+
         .print-table {
             width: 100%;
             border-collapse: collapse;
             margin: 10px 0;
             font-size: 10px;
         }
-        
+
         .print-table th, .print-table td {
             border: 1px solid #333;
             padding: 3px;
             text-align: left;
         }
-        
+
         .print-table th {
             background-color: #f0f0f0;
             font-weight: bold;
             font-size: 9px;
         }
-        
+
         .hide-in-challan {
             display: none;
         }
-        
+
         /* Password Change Modal */
         .password-modal {
             display: none;
@@ -295,7 +306,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .password-modal-content {
             background: white;
             padding: 30px;
@@ -304,7 +315,7 @@
             max-width: 400px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        
+
         .modal-title {
             font-size: 20px;
             font-weight: bold;
@@ -312,13 +323,13 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        
+
         .modal-buttons {
             display: flex;
             gap: 10px;
             margin-top: 20px;
         }
-        
+
         .modal-btn {
             flex: 1;
             padding: 12px;
@@ -328,21 +339,21 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .modal-btn-primary {
             background: #27ae60;
             color: white;
         }
-        
+
         .modal-btn-secondary {
             background: #95a5a6;
             color: white;
         }
-        
+
         .modal-btn:hover {
             transform: translateY(-1px);
         }
-        
+
         /* Animation for login card */
         @keyframes slideInUp {
             from {
@@ -354,18 +365,18 @@
                 transform: translateY(0);
             }
         }
-        
+
         .login-card {
             animation: slideInUp 0.6s ease-out;
         }
-        
+
         /* Responsive design */
         @media (max-width: 768px) {
             .login-card {
                 margin: 20px;
                 padding: 30px 25px;
             }
-            
+
             .company-title {
                 font-size: 20px;
             }
@@ -382,18 +393,18 @@
                 <div class="company-title">GMS COMPOSITE KNITTING IND LTD</div>
                 <div class="company-subtitle">Challan & Bill Management System</div>
             </div>
-            
+
             <form class="login-form" onsubmit="handleLogin(event)">
                 <div class="input-group">
                     <label class="input-label">USER NAME</label>
                     <input type="text" id="username" class="login-input" placeholder="Enter your username" required>
                 </div>
-                
+
                 <div class="input-group">
                     <label class="input-label">PASSWORD</label>
                     <input type="password" id="password" class="login-input" placeholder="Enter your password" required>
                 </div>
-                
+
                 <div class="button-group">
                     <button type="submit" class="login-btn login-btn-primary">
                         🔐 LOGIN
@@ -403,7 +414,7 @@
                     </button>
                 </div>
             </form>
-            
+
             <div class="login-footer">
                 <p>© 2025 GMS Composite Knitting Ind Ltd. All rights reserved.</p>
                 <p>Developed By: S@ju.TM</p>
@@ -420,22 +431,22 @@
                     <label class="input-label">Authorization Code</label>
                     <input type="password" id="authCode" class="login-input" placeholder="Enter authorization code" required>
                 </div>
-                
+
                 <div class="input-group">
                     <label class="input-label">New Username</label>
                     <input type="text" id="newUsername" class="login-input" placeholder="Enter new username" required>
                 </div>
-                
+
                 <div class="input-group">
                     <label class="input-label">New Password</label>
                     <input type="password" id="newPassword" class="login-input" placeholder="Enter new password" required>
                 </div>
-                
+
                 <div class="input-group">
                     <label class="input-label">Confirm New Password</label>
                     <input type="password" id="confirmPassword" class="login-input" placeholder="Confirm new password" required>
                 </div>
-                
+
                 <div class="modal-buttons">
                     <button type="submit" class="modal-btn modal-btn-primary">Update Password</button>
                     <button type="button" class="modal-btn modal-btn-secondary" onclick="closePasswordModal()">Cancel</button>
@@ -466,7 +477,7 @@
         <div id="home" class="page-section active">
             <div class="w3-card-4 w3-white w3-round-large w3-padding-large">
                 <h1 class="w3-text-dark-grey w3-xxxlarge w3-margin-bottom">Challan & Bill Management System</h1>
-                
+
                 <!-- Dashboard Filter Section -->
                 <div class="w3-panel w3-pale-blue w3-round w3-margin-bottom">
                     <h3 class="w3-text-blue">📊 Dashboard Filter</h3>
@@ -615,7 +626,7 @@
                     <div class="w3-panel w3-pale-blue w3-round w3-margin-bottom">
                         <h3 class="w3-text-blue">Basic Information</h3>
                     </div>
-                    
+
                     <div class="w3-row-padding w3-margin-bottom">
                         <div class="w3-half">
                             <label class="w3-text-grey">Date</label>
@@ -761,10 +772,10 @@
                                             <option value="mtr">Mtr</option>
                                         </select>
                                     </td>
-                                    <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
-                                    <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
-                                    <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" onchange="calculateAmount(this)"></td>
-                                    <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
+                                    <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
+                                    <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
+                                    <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" oninput="calculateTotal()"></td>
+                                    <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
                                     <td><input type="number" step="0.01" class="w3-input w3-border amount-input" placeholder="0.00" readonly></td>
                                     <td>
                                         <select class="w3-select w3-border currency-select" onchange="updateRowCurrency(this)">
@@ -781,7 +792,7 @@
                                     <td colspan="6" class="w3-center w3-large"><strong>GRAND TOTAL</strong></td>
                                     <td class="w3-center w3-large"><strong><span id="totalKg">0.00</span></strong></td>
                                     <td class="w3-center w3-large"><strong><span id="totalYds">0.00</span></strong></td>
-                                    <td class="w3-center w3-large"><strong>-</strong></td>
+                                    <td class="w3-center w3-large"><strong><span id="totalBag">0</span></strong></td>
                                     <td class="w3-center w3-large"><strong>-</strong></td>
                                     <td class="w3-center w3-large"><strong><span id="currencySymbol">$</span><span id="totalAmount">0.00</span></strong></td>
                                     <td class="w3-center">
@@ -817,7 +828,7 @@
         <div id="recent" class="page-section">
             <div class="w3-card-4 w3-white w3-round-large w3-padding-large">
                 <h1 class="w3-text-dark-grey w3-xxxlarge w3-margin-bottom">Recent Challans & Bills</h1>
-                
+
                 <div class="w3-row-padding w3-margin-bottom">
                     <div class="w3-half">
                         <input type="text" id="searchInput" class="w3-input w3-border w3-round" placeholder="Search by Challan No, Bill No, or Party Name..." onkeyup="filterRecords()">
@@ -831,7 +842,7 @@
                         <label class="w3-text-grey w3-small">To Date</label>
                     </div>
                 </div>
-                
+
                 <div class="w3-margin-bottom">
                     <button onclick="clearDateFilter()" class="w3-button w3-grey w3-small w3-round w3-margin-right">Clear Date Filter</button>
                     <button onclick="setTodayFilter()" class="w3-button w3-blue w3-small w3-round w3-margin-right">Today</button>
@@ -875,9 +886,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="document-title" id="printDocumentTitle">CHALLAN</div>
-            
+
             <div class="info-section">
                 <div>
                     <p style="margin: 2px 0;"><strong>Challan No:</strong> <span id="printChallanNo"></span></p>
@@ -897,7 +908,7 @@
                     <p style="margin: 2px 0;"><strong>Driver:</strong> <span id="printDriverName"></span></p>
                 </div>
             </div>
-            
+
             <table class="print-table" id="printItemsTable">
                 <thead>
                     <tr>
@@ -918,13 +929,12 @@
                 </thead>
                 <tbody id="printItemsTableBody">
                 </tbody>
-                <!-- FIXED: Added table footer for grand totals -->
                 <tfoot id="printTableFooter">
                     <tr style="font-weight: bold;">
                         <td colspan="6" style="text-align: center;">GRAND TOTAL</td>
                         <td id="printTotalKg">0.00</td>
                         <td id="printTotalYds">0.00</td>
-                        <td></td> <!-- Bag -->
+                        <td id="printTotalBag">0</td> <!-- Bag -->
                         <td class="rate-amount-col"></td> <!-- Rate -->
                         <td class="rate-amount-col" id="printGrandTotalAmount"></td> <!-- Amount -->
                         <td class="rate-amount-col"></td> <!-- Currency -->
@@ -932,20 +942,20 @@
                     </tr>
                 </tfoot>
             </table>
-            
+
             <div style="text-align: right; margin: 8px 0; font-size: 11px;">
                 <p class="rate-amount-col" style="margin: 0;"><strong>Total Amount: <span id="printTotalAmount"></span></strong></p>
             </div>
-            
+
             <div id="amountInWordsSection" class="rate-amount-col" style="margin: 8px 0; font-size: 11px; display: none;">
                 <p style="margin: 0;"><strong>Amount In Words:</strong> <span id="printAmountInWords"></span></p>
             </div>
-            
+
             <div style="font-size: 10px; margin: 5px 0;">
                 <p style="margin: 2px 0;"><strong>Item Description:</strong> <span id="printItemDescription"></span></p>
                 <p style="margin: 2px 0;"><strong>Challan Details:</strong> <span id="printChallanDetails"></span></p>
             </div>
-            
+
             <div class="signature-section">
                 <div class="signature-box">
                     <div class="signature-line">Prepared by</div>
@@ -1028,20 +1038,20 @@
         // Handle login
         function handleLogin(event) {
             event.preventDefault();
-            
+
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            
+
             if (username === loginCredentials.username && password === loginCredentials.password) {
                 isLoggedIn = true;
                 sessionStorage.setItem('isLoggedIn', 'true');
                 hideLoginPage();
                 initializeApp();
-                
+
                 // Clear login form
                 document.getElementById('username').value = '';
                 document.getElementById('password').value = '';
-                
+
                 // Show success message
                 setTimeout(() => {
                     alert('🎉 সফলভাবে লগ ইন হয়েছে!\n\nWelcome to GMS Composite Knitting Inventory System');
@@ -1058,12 +1068,12 @@
                 isLoggedIn = false;
                 sessionStorage.removeItem('isLoggedIn');
                 showLoginPage();
-                
+
                 // Reset all forms and data
                 resetForm();
                 allRecords = [];
                 dashboardData = [];
-                
+
                 alert('✅ সফলভাবে লগ আউট হয়েছে!');
             }
         }
@@ -1086,58 +1096,58 @@
         // Handle password change
         function handlePasswordChange(event) {
             event.preventDefault();
-            
+
             const authCode = document.getElementById('authCode').value;
             const newUsername = document.getElementById('newUsername').value;
             const newPassword = document.getElementById('newPassword').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
-            
+
             // Check authorization code
             if (authCode !== '290144') {
                 alert('❌ আপনার অনুমতি নেই!\n\nসঠিক অনুমতি কোড দিন।');
                 return;
             }
-            
+
             // Validate passwords match
             if (newPassword !== confirmPassword) {
                 alert('❌ পাসওয়ার্ড মিলছে না!\n\nঅনুগ্রহ করে একই পাসওয়ার্ড দুইবার দিন।');
                 return;
             }
-            
+
             // Validate password length
             if (newPassword.length < 4) {
                 alert('❌ পাসওয়ার্ড খুবই ছোট!\n\nকমপক্ষে ৪ অক্ষরের পাসওয়ার্ড দিন।');
                 return;
             }
-            
+
             // Validate username
             if (newUsername.length < 3) {
                 alert('❌ ইউজারনেম খুবই ছোট!\n\nকমপক্ষে ৩ অক্ষরের ইউজারনেম দিন।');
                 return;
             }
-            
+
             // Update credentials
             loginCredentials.username = newUsername;
             loginCredentials.password = newPassword;
-            
+
             // Save to localStorage
             localStorage.setItem('app_username', newUsername);
             localStorage.setItem('app_password', newPassword);
-            
+
             closePasswordModal();
-            
+
             alert('✅ পাসওয়ার্ড সফলভাবে পরিবর্তন হয়েছে!\n\n🔐 নতুন ইউজারনেম: ' + newUsername + '\n🔑 নতুন পাসওয়ার্ড সেট করা হয়েছে\n\nপরবর্তী লগ ইনে নতুন তথ্য ব্যবহার করুন।');
         }
 
         // Generate unique challan and bill numbers
         async function generateUniqueNumbers() {
             const currentYear = new Date().getFullYear();
-            
+
             try {
                 // Get counters from Firebase
                 const countersResponse = await fetch(`${firebaseConfig.databaseURL}/counters.json`);
                 let countersData = await countersResponse.json();
-                
+
                 // Initialize counters if they don't exist
                 if (!countersData) {
                     countersData = {
@@ -1150,25 +1160,25 @@
                         body: JSON.stringify(countersData)
                     });
                 }
-                
+
                 const challanCounter = countersData.challanCounter || 1;
                 const billCounter = countersData.billCounter || 1;
-                
+
                 currentChallanNumber = `CH-${currentYear}-${challanCounter.toString().padStart(6, '0')}`;
                 currentBillNumber = `BILL-${currentYear}-${billCounter.toString().padStart(6, '0')}`;
-                
+
                 document.getElementById('currentChallanNo').textContent = currentChallanNumber;
                 document.getElementById('currentBillNo').textContent = currentBillNumber;
-                
+
             } catch (error) {
                 console.error('Error loading counters from Firebase:', error);
                 // Fallback to localStorage if Firebase fails
                 let challanCounter = parseInt(localStorage.getItem('challanCounter') || '1');
                 let billCounter = parseInt(localStorage.getItem('billCounter') || '1');
-                
+
                 currentChallanNumber = `CH-${currentYear}-${challanCounter.toString().padStart(6, '0')}`;
                 currentBillNumber = `BILL-${currentYear}-${billCounter.toString().padStart(6, '0')}`;
-                
+
                 document.getElementById('currentChallanNo').textContent = currentChallanNumber;
                 document.getElementById('currentBillNo').textContent = currentBillNumber;
             }
@@ -1191,42 +1201,42 @@
                     },
                     body: JSON.stringify(data)
                 });
-                
+
                 if (response.ok) {
                     // Update counters in Firebase
                     try {
                         const countersResponse = await fetch(`${firebaseConfig.databaseURL}/counters.json`);
                         let countersData = await countersResponse.json();
-                        
+
                         if (!countersData) {
                             countersData = { challanCounter: 1, billCounter: 1 };
                         }
-                        
+
                         // Increment counters
                         countersData.challanCounter = (countersData.challanCounter || 1) + 1;
                         countersData.billCounter = (countersData.billCounter || 1) + 1;
-                        
+
                         // Save updated counters to Firebase
                         await fetch(`${firebaseConfig.databaseURL}/counters.json`, {
                             method: 'PUT',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(countersData)
                         });
-                        
+
                         // Also update localStorage as backup
                         localStorage.setItem('challanCounter', countersData.challanCounter.toString());
                         localStorage.setItem('billCounter', countersData.billCounter.toString());
-                        
+
                     } catch (counterError) {
                         console.error('Error updating counters in Firebase:', counterError);
                         // Fallback to localStorage increment
                         let challanCounter = parseInt(localStorage.getItem('challanCounter') || '1');
                         let billCounter = parseInt(localStorage.getItem('billCounter') || '1');
-                        
+
                         localStorage.setItem('challanCounter', (challanCounter + 1).toString());
                         localStorage.setItem('billCounter', (billCounter + 1).toString());
                     }
-                    
+
                     return true;
                 }
                 return false;
@@ -1246,7 +1256,7 @@
                     },
                     body: JSON.stringify(data)
                 });
-                
+
                 return response.ok;
             } catch (error) {
                 console.error('Error updating record in Firebase:', error);
@@ -1265,7 +1275,7 @@
         function populatePartyList() {
             const partyList = document.getElementById('dashPartyList');
             const uniqueParties = [...new Set(allRecords.map(record => record.partyName))];
-            
+
             partyList.innerHTML = uniqueParties.map(party => `<option value="${party}">`).join('');
         }
 
@@ -1273,36 +1283,36 @@
             const fromDate = document.getElementById('dashFromDate').value;
             const toDate = document.getElementById('dashToDate').value;
             const partyFilter = document.getElementById('dashPartyFilter').value.toLowerCase();
-            
+
             // Filter records based on dashboard filters
             dashboardData = allRecords.filter(record => {
                 let matchesDate = true;
                 let matchesParty = true;
-                
+
                 // Date filter
                 if (fromDate || toDate) {
                     const recordDate = new Date(record.date);
-                    
+
                     if (fromDate) {
                         const fromDateTime = new Date(fromDate);
                         matchesDate = matchesDate && recordDate >= fromDateTime;
                     }
-                    
+
                     if (toDate) {
                         const toDateTime = new Date(toDate);
                         toDateTime.setHours(23, 59, 59, 999);
                         matchesDate = matchesDate && recordDate <= toDateTime;
                     }
                 }
-                
+
                 // Party filter
                 if (partyFilter) {
                     matchesParty = record.partyName.toLowerCase().includes(partyFilter);
                 }
-                
+
                 return matchesDate && matchesParty;
             });
-            
+
             updateDashboardStats();
             updateTopParties();
             updateRecentActivity();
@@ -1314,7 +1324,7 @@
             let totalUSD = 0;
             let totalBDT = 0;
             const uniqueParties = new Set();
-            
+
             dashboardData.forEach(record => {
                 const amount = parseFloat(record.totalAmount) || 0;
                 if (record.currency === 'USD') {
@@ -1324,7 +1334,7 @@
                 }
                 uniqueParties.add(record.partyName);
             });
-            
+
             document.getElementById('totalChallans').textContent = totalChallans.toLocaleString();
             document.getElementById('totalAmountUSD').textContent = '$' + totalUSD.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
             document.getElementById('totalAmountBDT').textContent = '৳' + totalBDT.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -1333,20 +1343,20 @@
 
         function updateTopParties() {
             const partyTotals = {};
-            
+
             dashboardData.forEach(record => {
                 const party = record.partyName;
                 const amount = parseFloat(record.totalAmount) || 0;
                 const currency = record.currency;
-                
+
                 if (!partyTotals[party]) {
                     partyTotals[party] = { USD: 0, BDT: 0, totalChallans: 0 };
                 }
-                
+
                 partyTotals[party][currency] += amount;
                 partyTotals[party].totalChallans += 1;
             });
-            
+
             // Convert to array and sort by total value (USD + BDT converted to USD for comparison)
             const sortedParties = Object.entries(partyTotals)
                 .map(([party, data]) => ({
@@ -1356,19 +1366,19 @@
                 }))
                 .sort((a, b) => b.totalValue - a.totalValue)
                 .slice(0, 5);
-            
+
             const container = document.getElementById('topPartiesContainer');
-            
+
             if (sortedParties.length === 0) {
                 container.innerHTML = '<p class="w3-text-grey w3-center">No data available</p>';
                 return;
             }
-            
+
             container.innerHTML = sortedParties.map((item, index) => `
                 <div class="w3-panel w3-border-left w3-border-${index === 0 ? 'gold' : index === 1 ? 'silver' : 'brown'} w3-pale-${index === 0 ? 'yellow' : index === 1 ? 'grey' : 'red'} w3-margin-bottom">
                     <h4 class="w3-margin-bottom">${index + 1}. ${item.party}</h4>
                     <p class="w3-small w3-margin-bottom">
-                        <strong>USD:</strong> $${item.USD.toLocaleString('en-US', {minimumFractionDigits: 2})} | 
+                        <strong>USD:</strong> $${item.USD.toLocaleString('en-US', {minimumFractionDigits: 2})} |
                         <strong>BDT:</strong> ৳${item.BDT.toLocaleString('en-US', {minimumFractionDigits: 2})}
                     </p>
                     <p class="w3-small w3-text-grey">Total Challans: ${item.totalChallans}</p>
@@ -1380,21 +1390,21 @@
             const recentRecords = dashboardData
                 .sort((a, b) => new Date(b.createdAt || b.date) - new Date(a.createdAt || a.date))
                 .slice(0, 5);
-            
+
             const container = document.getElementById('recentActivityContainer');
-            
+
             if (recentRecords.length === 0) {
                 container.innerHTML = '<p class="w3-text-grey w3-center">No recent activity</p>';
                 return;
             }
-            
+
             container.innerHTML = recentRecords.map(record => `
                 <div class="w3-panel w3-border-left w3-border-blue w3-pale-blue w3-margin-bottom">
                     <p class="w3-small w3-margin-bottom">
                         <strong>${record.challanNumber}</strong> - ${record.partyName}
                     </p>
                     <p class="w3-small w3-text-grey">
-                        ${new Date(record.date).toLocaleDateString()} | 
+                        ${new Date(record.date).toLocaleDateString()} |
                         ${record.currency === 'USD' ? '$' : '৳'}${parseFloat(record.totalAmount).toLocaleString('en-US', {minimumFractionDigits: 2})}
                     </p>
                 </div>
@@ -1403,31 +1413,31 @@
 
         function updateMonthlyTrend() {
             const monthlyData = {};
-            
+
             dashboardData.forEach(record => {
                 const date = new Date(record.date);
                 const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-                
+
                 if (!monthlyData[monthKey]) {
                     monthlyData[monthKey] = { challans: 0, USD: 0, BDT: 0 };
                 }
-                
+
                 monthlyData[monthKey].challans += 1;
                 const amount = parseFloat(record.totalAmount) || 0;
                 monthlyData[monthKey][record.currency] += amount;
             });
-            
+
             const sortedMonths = Object.entries(monthlyData)
                 .sort(([a], [b]) => b.localeCompare(a))
                 .slice(0, 6);
-            
+
             const tbody = document.getElementById('monthlyTrendBody');
-            
+
             if (sortedMonths.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="4" class="w3-center w3-text-grey">No data available</td></tr>';
                 return;
             }
-            
+
             tbody.innerHTML = sortedMonths.map(([month, data]) => {
                 const monthName = new Date(month + '-01').toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
                 return `
@@ -1460,7 +1470,7 @@
             const today = new Date();
             const firstDayOfWeek = new Date(today.setDate(today.getDate() - today.getDay()));
             const lastDayOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 6));
-            
+
             document.getElementById('dashFromDate').value = firstDayOfWeek.toISOString().split('T')[0];
             document.getElementById('dashToDate').value = lastDayOfWeek.toISOString().split('T')[0];
             updateDashboard();
@@ -1470,7 +1480,7 @@
             const today = new Date();
             const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
             const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-            
+
             document.getElementById('dashFromDate').value = firstDayOfMonth.toISOString().split('T')[0];
             document.getElementById('dashToDate').value = lastDayOfMonth.toISOString().split('T')[0];
             updateDashboard();
@@ -1481,36 +1491,36 @@
             try {
                 const response = await fetch(`${firebaseConfig.databaseURL}/challans.json`);
                 const data = await response.json();
-                
+
                 allRecords = [];
                 if (data) {
                     Object.keys(data).forEach(key => {
                         allRecords.push({ id: key, ...data[key] });
                     });
                 }
-                
+
                 displayRecords(allRecords);
                 populatePartyList();
                 updateDashboard();
             } catch (error) {
                 console.error('Error loading records:', error);
-                document.getElementById('recordsTableBody').innerHTML = 
+                document.getElementById('recordsTableBody').innerHTML =
                     '<tr><td colspan="6" class="w3-center w3-text-red">Error loading records</td></tr>';
             }
         }
 
         // Display records in table
         let filteredRecords = []; // Store filtered records for export
-        
+
         function displayRecords(records) {
             filteredRecords = records; // Store for export
             const tbody = document.getElementById('recordsTableBody');
-            
+
             if (records.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="6" class="w3-center w3-text-grey">No records found</td></tr>';
                 return;
             }
-            
+
             tbody.innerHTML = records.map(record => `
                 <tr>
                     <td>${record.challanNumber}</td>
@@ -1532,33 +1542,33 @@
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const fromDate = document.getElementById('fromDate').value;
             const toDate = document.getElementById('toDate').value;
-            
+
             const filteredRecords = allRecords.filter(record => {
                 // Text search filter
                 const matchesSearch = record.challanNumber.toLowerCase().includes(searchTerm) ||
                                     record.billNumber.toLowerCase().includes(searchTerm) ||
                                     record.partyName.toLowerCase().includes(searchTerm);
-                
+
                 // Date filter
                 let matchesDate = true;
                 if (fromDate || toDate) {
                     const recordDate = new Date(record.date);
-                    
+
                     if (fromDate) {
                         const fromDateTime = new Date(fromDate);
                         matchesDate = matchesDate && recordDate >= fromDateTime;
                     }
-                    
+
                     if (toDate) {
                         const toDateTime = new Date(toDate);
                         toDateTime.setHours(23, 59, 59, 999); // Include the entire end date
                         matchesDate = matchesDate && recordDate <= toDateTime;
                     }
                 }
-                
+
                 return matchesSearch && matchesDate;
             });
-            
+
             displayRecords(filteredRecords);
         }
 
@@ -1582,7 +1592,7 @@
             const today = new Date();
             const firstDayOfWeek = new Date(today.setDate(today.getDate() - today.getDay()));
             const lastDayOfWeek = new Date(today.setDate(today.getDate() - today.getDay() + 6));
-            
+
             document.getElementById('fromDate').value = firstDayOfWeek.toISOString().split('T')[0];
             document.getElementById('toDate').value = lastDayOfWeek.toISOString().split('T')[0];
             filterRecords();
@@ -1593,7 +1603,7 @@
             const today = new Date();
             const firstDayOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
             const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-            
+
             document.getElementById('fromDate').value = firstDayOfMonth.toISOString().split('T')[0];
             document.getElementById('toDate').value = lastDayOfMonth.toISOString().split('T')[0];
             filterRecords();
@@ -1629,7 +1639,7 @@
 
             let result = '';
             let thousandIndex = 0;
-            
+
             while (num > 0) {
                 if (num % 1000 !== 0) {
                     result = convertHundreds(num % 1000) + thousands[thousandIndex] + ' ' + result;
@@ -1637,7 +1647,7 @@
                 num = Math.floor(num / 1000);
                 thousandIndex++;
             }
-            
+
             return result.trim();
         }
 
@@ -1645,7 +1655,7 @@
         function printDocument(recordId, type) {
             const record = allRecords.find(r => r.id === recordId);
             if (!record) return;
-            
+
             if (type === 'challan') {
                 // Print challan with First Copy and Second Copy
                 printChallanCopies(record);
@@ -1658,11 +1668,11 @@
         function printChallanCopies(record) {
             const printContainer = document.getElementById('printTemplate');
             const originalTemplate = printContainer.innerHTML;
-            
+
             // Create two copies
             const firstCopy = createChallanCopy(record, 'Challan - First Copy');
             const secondCopy = createChallanCopy(record, 'Challan - Second Copy');
-            
+
             // Try to fit both on one page, otherwise use two pages
             printContainer.innerHTML = `
                 <div style="page-break-after: avoid;">
@@ -1672,11 +1682,11 @@
                     ${secondCopy}
                 </div>
             `;
-            
+
             printContainer.style.display = 'block';
             window.print();
             printContainer.style.display = 'none';
-            
+
             // Restore original template
             printContainer.innerHTML = originalTemplate;
         }
@@ -1696,13 +1706,15 @@
                     <td>${item.remarks || ''}</td>
                 </tr>
             `).join('');
-            
+
             // FIXED: Calculate totals for challan and create footer HTML
             let totalKg = 0;
             let totalYds = 0;
+            let totalBag = 0;
             record.items.forEach(item => {
                 totalKg += parseFloat(item.kg) || 0;
                 totalYds += parseFloat(item.yds) || 0;
+                totalBag += parseInt(item.bag) || 0;
             });
 
             const footerHtml = `
@@ -1711,7 +1723,7 @@
                     <td style="border: 1px solid #333; padding: 6px; text-align: center;" colspan="6">GRAND TOTAL</td>
                     <td style="border: 1px solid #333; padding: 6px;">${totalKg.toFixed(2)}</td>
                     <td style="border: 1px solid #333; padding: 6px;">${totalYds.toFixed(2)}</td>
-                    <td style="border: 1px solid #333; padding: 6px;"></td>
+                    <td style="border: 1px solid #333; padding: 6px;">${totalBag}</td>
                     <td style="border: 1px solid #333; padding: 6px;"></td>
                 </tr>
             </tfoot>
@@ -1728,9 +1740,9 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div style="font-size: 18px; font-weight: bold; text-decoration: underline; margin: 15px 0; text-align: center;">${title}</div>
-                    
+
                     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; font-size: 13px;">
                         <div>
                             <p style="margin: 5px 0;"><strong>Challan No:</strong> ${record.challanNumber}</p>
@@ -1748,7 +1760,7 @@
                             <p style="margin: 5px 0;"><strong>Driver:</strong> ${record.driverName || ''}</p>
                         </div>
                     </div>
-                    
+
                     <table style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 12px;">
                         <thead>
                             <tr>
@@ -1765,16 +1777,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${itemsRows.replace(/td>/g, 'td style="border: 1px solid #333; padding: 6px; text-align: left;">')}
+                            ${itemsRows.replace(/<td>/g, '<td style="border: 1px solid #333; padding: 6px; text-align: left;">')}
                         </tbody>
                         ${footerHtml}
                     </table>
-                    
+
                     <div style="font-size: 12px; margin: 15px 0;">
                         <p style="margin: 5px 0;"><strong>Item Description:</strong> ${record.itemDescription || ''}</p>
                         <p style="margin: 5px 0;"><strong>Challan Details:</strong> ${record.challanDetails || ''}</p>
                     </div>
-                    
+
                     <div style="display: flex; justify-content: space-between; margin-top: 30px; padding-top: 15px;">
                         <div style="text-align: center; width: 18%;">
                             <div style="margin-top: 40px; font-size: 11px; padding-top: 8px; border-top: 1px solid #333;">Prepared by</div>
@@ -1796,6 +1808,7 @@
             `;
         }
 
+
         function printSingleDocument(record, type) {
             // Populate print template for bill
             document.getElementById('printDocumentTitle').textContent = type.toUpperCase();
@@ -1812,7 +1825,7 @@
             document.getElementById('printCurrency').textContent = record.currency;
             document.getElementById('printItemDescription').textContent = record.itemDescription || '';
             document.getElementById('printChallanDetails').textContent = record.challanDetails || '';
-            
+
             // Populate items table
             const tbody = document.getElementById('printItemsTableBody');
             tbody.innerHTML = record.items.map((item, index) => `
@@ -1836,41 +1849,44 @@
             // FIXED: Calculate and populate footer for the bill
             let totalKg = 0;
             let totalYds = 0;
+            let totalBag = 0;
             record.items.forEach(item => {
                 totalKg += parseFloat(item.kg) || 0;
                 totalYds += parseFloat(item.yds) || 0;
+                totalBag += parseInt(item.bag) || 0;
             });
             document.getElementById('printTotalKg').textContent = totalKg.toFixed(2);
             document.getElementById('printTotalYds').textContent = totalYds.toFixed(2);
+            document.getElementById('printTotalBag').textContent = totalBag;
             document.getElementById('printGrandTotalAmount').textContent = `${record.currency === 'USD' ? '$' : '৳'}${record.totalAmount}`;
-            
+
             const currencySymbol = record.currency === 'USD' ? '$' : '৳';
             const currencyName = record.currency === 'USD' ? 'Dollars' : 'Taka';
             const totalAmount = parseFloat(record.totalAmount);
             const amountInWords = numberToWords(Math.floor(totalAmount)) + ' ' + currencyName;
-            
+
             document.getElementById('printTotalAmount').textContent = `${currencySymbol}${record.totalAmount}`;
             document.getElementById('printAmountInWords').textContent = amountInWords;
-            
+
             // Show rate and amount columns for bill
             const rateAmountCols = document.querySelectorAll('.rate-amount-col');
             rateAmountCols.forEach(col => {
                 col.style.display = 'table-cell';
             });
-            
+
             // Show amount in words section for bill
             document.getElementById('amountInWordsSection').style.display = 'block';
 
-            // FIXED: Hide the old total amount paragraph since it's now in the table footer
+            // Hide the old total amount paragraph since it's now in the table footer
             const oldTotalAmountP = document.querySelector('#printTemplate .rate-amount-col strong').parentElement;
             oldTotalAmountP.style.display = 'none';
-            
+
             // Show print template and print
             document.getElementById('printTemplate').style.display = 'block';
             window.print();
             document.getElementById('printTemplate').style.display = 'none';
 
-            // FIXED: Restore the display of the old total amount paragraph
+            // Restore the display of the old total amount paragraph
             oldTotalAmountP.style.display = 'block';
         }
 
@@ -1878,16 +1894,16 @@
         function editRecord(recordId) {
             const record = allRecords.find(r => r.id === recordId);
             if (!record) return;
-            
+
             editingRecordId = recordId;
-            
+
             // Switch to challan page
             showPage('challan');
-            
+
             // Update page title and button text
             document.querySelector('#challan h1').textContent = 'Edit Challan & Bill';
             document.querySelector('button[type="submit"]').textContent = 'Update Challan & Bill';
-            
+
             // Fill form with existing data
             document.getElementById('challanDate').value = record.date;
             document.getElementById('department').value = record.department || '';
@@ -1900,18 +1916,18 @@
             document.getElementById('itemDescription').value = record.itemDescription || '';
             document.getElementById('challanDetails').value = record.challanDetails || '';
             document.getElementById('currencySelect').value = record.currency;
-            
+
             // Update currency symbol
             updateCurrency();
-            
+
             // Update challan and bill numbers display
             document.getElementById('currentChallanNo').textContent = record.challanNumber;
             document.getElementById('currentBillNo').textContent = record.billNumber;
-            
+
             // Clear existing table rows
             const tableBody = document.getElementById('itemsTableBody');
             tableBody.innerHTML = '';
-            
+
             // Add rows with existing data
             record.items.forEach((item, index) => {
                 const newRow = document.createElement('tr');
@@ -1931,10 +1947,10 @@
                             <option value="mtr" ${item.uom === 'mtr' ? 'selected' : ''}>Mtr</option>
                         </select>
                     </td>
-                    <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" value="${item.kg || ''}" onchange="calculateAmount(this)"></td>
-                    <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" value="${item.yds || ''}" onchange="calculateAmount(this)"></td>
-                    <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" value="${item.bag || ''}" onchange="calculateAmount(this)"></td>
-                    <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" value="${item.rate || ''}" onchange="calculateAmount(this)"></td>
+                    <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" value="${item.kg || ''}" oninput="calculateAmount(this)"></td>
+                    <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" value="${item.yds || ''}" oninput="calculateAmount(this)"></td>
+                    <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" value="${item.bag || ''}" oninput="calculateTotal()"></td>
+                    <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" value="${item.rate || ''}" oninput="calculateAmount(this)"></td>
                     <td><input type="number" step="0.01" class="w3-input w3-border amount-input" placeholder="0.00" value="${item.amount || ''}" readonly></td>
                     <td>
                         <select class="w3-select w3-border currency-select" onchange="updateRowCurrency(this)">
@@ -1947,10 +1963,10 @@
                 `;
                 tableBody.appendChild(newRow);
             });
-            
+
             rowCounter = record.items.length;
             calculateTotal();
-            
+
             // Add cancel edit button
             const formButtons = document.querySelector('#challan .w3-margin-top');
             if (!document.getElementById('cancelEditBtn')) {
@@ -1969,12 +1985,12 @@
             editingRecordId = null;
             document.querySelector('#challan h1').textContent = 'Create New Challan';
             document.querySelector('button[type="submit"]').textContent = 'Create Challan & Bill';
-            
+
             const cancelBtn = document.getElementById('cancelEditBtn');
             if (cancelBtn) {
                 cancelBtn.remove();
             }
-            
+
             resetForm();
             generateUniqueNumbers();
         }
@@ -1982,71 +1998,82 @@
         // Handle form submission
         async function handleChallanSubmit(event) {
             event.preventDefault();
-            
-            // Collect form data
-            const formData = {
-                challanNumber: editingRecordId ? document.getElementById('currentChallanNo').textContent : currentChallanNumber,
-                billNumber: editingRecordId ? document.getElementById('currentBillNo').textContent : currentBillNumber,
-                date: document.getElementById('challanDate').value,
-                department: document.getElementById('department').value,
-                currency: document.getElementById('currencySelect').value,
-                partyName: document.getElementById('partyName').value,
-                location: document.getElementById('location').value,
-                address: document.getElementById('address').value,
-                gatePassNo: document.getElementById('gatePassNo').value,
-                transportNo: document.getElementById('transportNo').value,
-                driverName: document.getElementById('driverName').value,
-                itemDescription: document.getElementById('itemDescription').value,
-                challanDetails: document.getElementById('challanDetails').value,
-                totalAmount: document.getElementById('totalAmount').textContent,
-                items: [],
-                createdAt: editingRecordId ? allRecords.find(r => r.id === editingRecordId).createdAt : new Date().toISOString(),
-                updatedAt: editingRecordId ? new Date().toISOString() : undefined
-            };
-            
-            // Collect items data
-            const rows = document.querySelectorAll('#itemsTableBody tr');
-            rows.forEach(row => {
-                const item = {
-                    orderNo: row.cells[1].querySelector('input').value,
-                    colour: row.cells[2].querySelector('input').value,
-                    measurement: row.cells[3].querySelector('input').value,
-                    process: row.cells[4].querySelector('input').value,
-                    uom: row.cells[5].querySelector('select').value,
-                    kg: row.cells[6].querySelector('input').value,
-                    yds: row.cells[7].querySelector('input').value,
-                    bag: row.cells[8].querySelector('input').value,
-                    rate: row.cells[9].querySelector('input').value,
-                    amount: row.cells[10].querySelector('input').value,
-                    currency: row.cells[11].querySelector('select').value,
-                    remarks: row.cells[12].querySelector('input').value
+            const submitButton = event.target.querySelector('button[type="submit"]');
+
+            // --- FIX: Disable button to prevent double submission ---
+            submitButton.disabled = true;
+            submitButton.textContent = 'Saving...';
+
+            try {
+                // Collect form data
+                const formData = {
+                    challanNumber: editingRecordId ? document.getElementById('currentChallanNo').textContent : currentChallanNumber,
+                    billNumber: editingRecordId ? document.getElementById('currentBillNo').textContent : currentBillNumber,
+                    date: document.getElementById('challanDate').value,
+                    department: document.getElementById('department').value,
+                    currency: document.getElementById('currencySelect').value,
+                    partyName: document.getElementById('partyName').value,
+                    location: document.getElementById('location').value,
+                    address: document.getElementById('address').value,
+                    gatePassNo: document.getElementById('gatePassNo').value,
+                    transportNo: document.getElementById('transportNo').value,
+                    driverName: document.getElementById('driverName').value,
+                    itemDescription: document.getElementById('itemDescription').value,
+                    challanDetails: document.getElementById('challanDetails').value,
+                    totalAmount: document.getElementById('totalAmount').textContent,
+                    items: [],
+                    createdAt: editingRecordId ? allRecords.find(r => r.id === editingRecordId).createdAt : new Date().toISOString(),
+                    updatedAt: editingRecordId ? new Date().toISOString() : undefined
                 };
-                formData.items.push(item);
-            });
-            
-            let saved = false;
-            
-            if (editingRecordId) {
-                // Update existing record
-                saved = await updateRecord(editingRecordId, formData);
-                if (saved) {
-                    alert('Challan and Bill updated successfully! ✅\n\nChallan No: ' + formData.challanNumber + '\nBill No: ' + formData.billNumber);
-                    cancelEdit();
-                    loadRecords();
+
+                // Collect items data
+                const rows = document.querySelectorAll('#itemsTableBody tr');
+                rows.forEach(row => {
+                    const item = {
+                        orderNo: row.cells[1].querySelector('input').value,
+                        colour: row.cells[2].querySelector('input').value,
+                        measurement: row.cells[3].querySelector('input').value,
+                        process: row.cells[4].querySelector('input').value,
+                        uom: row.cells[5].querySelector('select').value,
+                        kg: row.cells[6].querySelector('input').value,
+                        yds: row.cells[7].querySelector('input').value,
+                        bag: row.cells[8].querySelector('input').value,
+                        rate: row.cells[9].querySelector('input').value,
+                        amount: row.cells[10].querySelector('input').value,
+                        currency: row.cells[11].querySelector('select').value,
+                        remarks: row.cells[12].querySelector('input').value
+                    };
+                    formData.items.push(item);
+                });
+
+                let saved = false;
+
+                if (editingRecordId) {
+                    // Update existing record
+                    saved = await updateRecord(editingRecordId, formData);
+                    if (saved) {
+                        alert('Challan and Bill updated successfully! ✅\n\nChallan No: ' + formData.challanNumber + '\nBill No: ' + formData.billNumber);
+                        cancelEdit();
+                        loadRecords();
+                    }
+                } else {
+                    // Create new record
+                    saved = await saveToFirebase(formData);
+                    if (saved) {
+                        alert('Challan and Bill created successfully! 🎉\n\nChallan No: ' + currentChallanNumber + '\nBill No: ' + currentBillNumber);
+                        resetForm();
+                        generateUniqueNumbers();
+                        loadRecords();
+                    }
                 }
-            } else {
-                // Create new record
-                saved = await saveToFirebase(formData);
-                if (saved) {
-                    alert('Challan and Bill created successfully! 🎉\n\nChallan No: ' + currentChallanNumber + '\nBill No: ' + currentBillNumber);
-                    resetForm();
-                    generateUniqueNumbers();
-                    loadRecords();
+
+                if (!saved) {
+                    alert('Error saving data. Please try again.');
                 }
-            }
-            
-            if (!saved) {
-                alert('Error saving data. Please try again.');
+            } finally {
+                // --- FIX: Re-enable button after operation is complete ---
+                submitButton.disabled = false;
+                submitButton.textContent = editingRecordId ? 'Update Challan & Bill' : 'Create Challan & Bill';
             }
         }
 
@@ -2054,12 +2081,12 @@
         function showPage(pageId) {
             const pages = document.querySelectorAll('.page-section');
             pages.forEach(page => page.classList.remove('active'));
-            
+
             document.getElementById(pageId).classList.add('active');
-            
+
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => link.classList.remove('w3-blue'));
-            
+
             // Find the correct nav button to highlight
             const navButtons = document.querySelectorAll('.nav-link');
             navButtons.forEach(button => {
@@ -2092,10 +2119,10 @@
                         <option value="mtr">Mtr</option>
                     </select>
                 </td>
-                <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
-                <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
-                <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" onchange="calculateAmount(this)"></td>
-                <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
+                <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
+                <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
+                <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" oninput="calculateTotal()"></td>
+                <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
                 <td><input type="number" step="0.01" class="w3-input w3-border amount-input" placeholder="0.00" readonly></td>
                 <td>
                     <select class="w3-select w3-border currency-select" onchange="updateRowCurrency(this)">
@@ -2129,11 +2156,10 @@
             const uom = row.querySelector('.uom-select').value;
             const kg = parseFloat(row.querySelector('.kg-input').value) || 0;
             const yds = parseFloat(row.querySelector('.yds-input').value) || 0;
-            const bag = parseFloat(row.querySelector('.bag-input').value) || 0;
             const rate = parseFloat(row.querySelector('.rate-input').value) || 0;
-            
+
             let amount = 0;
-            
+
             if (uom === 'kg') {
                 amount = kg * rate;
             } else if (uom === 'yds') {
@@ -2141,44 +2167,52 @@
             } else if (uom === 'sample') {
                 amount = rate;
             } else {
-                const totalQuantity = kg + yds + bag;
-                amount = totalQuantity * rate;
+                 amount = (kg + yds) * rate; // Default calculation if UoM is not specific for rate
             }
-            
+
             row.querySelector('.amount-input').value = amount.toFixed(2);
             calculateTotal();
         }
+
 
         function calculateTotal() {
             const amountInputs = document.querySelectorAll('.amount-input');
             const kgInputs = document.querySelectorAll('.kg-input');
             const ydsInputs = document.querySelectorAll('.yds-input');
-            
+            const bagInputs = document.querySelectorAll('.bag-input'); // Get bag inputs
+
             let totalAmount = 0;
             let totalKg = 0;
             let totalYds = 0;
-            
+            let totalBag = 0; // Initialize total for bags
+
             amountInputs.forEach(input => {
                 totalAmount += parseFloat(input.value) || 0;
             });
-            
+
             kgInputs.forEach(input => {
                 totalKg += parseFloat(input.value) || 0;
             });
-            
+
             ydsInputs.forEach(input => {
                 totalYds += parseFloat(input.value) || 0;
             });
-            
+
+            bagInputs.forEach(input => {
+                totalBag += parseInt(input.value) || 0; // Calculate total bags
+            });
+
             document.getElementById('totalAmount').textContent = totalAmount.toFixed(2);
             document.getElementById('totalKg').textContent = totalKg.toFixed(2);
             document.getElementById('totalYds').textContent = totalYds.toFixed(2);
+            document.getElementById('totalBag').textContent = totalBag; // Display total bags
         }
+
 
         function updateCurrency() {
             const currencySelect = document.getElementById('currencySelect');
             const currencySymbol = document.getElementById('currencySymbol');
-            
+
             if (currencySelect.value === 'USD') {
                 currencySymbol.textContent = '$';
             } else if (currencySelect.value === 'BDT') {
@@ -2197,10 +2231,10 @@
                 alert('কোন রেকর্ড পাওয়া যায়নি! প্রথমে কিছু ডেটা ফিল্টার করুন।');
                 return;
             }
-            
+
             // Create workbook
             const wb = XLSX.utils.book_new();
-            
+
             // === DETAILED ITEMS SHEET ONLY ===
             const detailsData = [
                 [''], // Empty row for spacing
@@ -2216,7 +2250,7 @@
                 [''],
                 ['Challan No', 'Bill No', 'Party Name', 'Date', 'SL', 'Order No', 'Colour', 'Measurement', 'Process', 'UoM', 'Kg', 'Yds', 'Bag', 'Rate', 'Amount', 'Currency', 'Remarks']
             ];
-            
+
             // Add detailed items data
             filteredRecords.forEach(record => {
                 if (record.items && record.items.length > 0) {
@@ -2263,17 +2297,17 @@
                     ]);
                 }
             });
-            
+
             const detailsWs = XLSX.utils.aoa_to_sheet(detailsData);
-            
+
             // Apply beautiful styling to Details Sheet
             const range = XLSX.utils.decode_range(detailsWs['!ref']);
-            
+
             // Company header styling (Row 2)
-            detailsWs['B2'] = { 
-                v: 'GMS COMPOSITE KNITTING IND LTD', 
-                t: 's', 
-                s: { 
+            detailsWs['B2'] = {
+                v: 'GMS COMPOSITE KNITTING IND LTD',
+                t: 's',
+                s: {
                     font: { bold: true, sz: 18, color: { rgb: "FFFFFF" } },
                     alignment: { horizontal: "center", vertical: "center" },
                     fill: { fgColor: { rgb: "1F4E79" } },
@@ -2285,12 +2319,12 @@
                     }
                 }
             };
-            
+
             // Company address (Row 3)
-            detailsWs['B3'] = { 
-                v: 'Sardagonj, Kashimpur, Gazipur', 
-                t: 's', 
-                s: { 
+            detailsWs['B3'] = {
+                v: 'Sardagonj, Kashimpur, Gazipur',
+                t: 's',
+                s: {
                     font: { sz: 12, color: { rgb: "1F4E79" } },
                     alignment: { horizontal: "center" },
                     fill: { fgColor: { rgb: "E7F3FF" } },
@@ -2302,12 +2336,12 @@
                     }
                 }
             };
-            
+
             // Contact info (Row 4)
-            detailsWs['B4'] = { 
-                v: 'Phone: +880-2-9291234 | Email: info@gmsbd.com', 
-                t: 's', 
-                s: { 
+            detailsWs['B4'] = {
+                v: 'Phone: +880-2-9291234 | Email: info@gmsbd.com',
+                t: 's',
+                s: {
                     font: { sz: 10, color: { rgb: "666666" } },
                     alignment: { horizontal: "center" },
                     fill: { fgColor: { rgb: "F8F9FA" } },
@@ -2319,12 +2353,12 @@
                     }
                 }
             };
-            
+
             // Report title (Row 6)
-            detailsWs['B6'] = { 
-                v: '📋 DETAILED ITEMS REPORT', 
-                t: 's', 
-                s: { 
+            detailsWs['B6'] = {
+                v: '📋 DETAILED ITEMS REPORT',
+                t: 's',
+                s: {
                     font: { bold: true, sz: 16, color: { rgb: "FFFFFF" } },
                     alignment: { horizontal: "center", vertical: "center" },
                     fill: { fgColor: { rgb: "C55A11" } },
@@ -2336,7 +2370,7 @@
                     }
                 }
             };
-            
+
             // Header row styling (row 12 - index 11)
             for (let col = 0; col <= 16; col++) {
                 const cellRef = XLSX.utils.encode_cell({ r: 11, c: col });
@@ -2354,7 +2388,7 @@
                     };
                 }
             }
-            
+
             // Data rows styling with alternating colors and proper borders
             const totalDetailRows = detailsData.length - 12;
             for (let row = 12; row < 12 + totalDetailRows; row++) {
@@ -2370,7 +2404,7 @@
                                 left: { style: "thin", color: { rgb: "4472C4" } },
                                 right: { style: "thin", color: { rgb: "4472C4" } }
                             },
-                            alignment: { 
+                            alignment: {
                                 horizontal: [10, 11, 13, 14].includes(col) ? "right" : "left",
                                 vertical: "center"
                             },
@@ -2379,7 +2413,7 @@
                     }
                 }
             }
-            
+
             // Set column widths for better appearance
             detailsWs['!cols'] = [
                 { wch: 15 }, // Challan No
@@ -2400,7 +2434,7 @@
                 { wch: 8 },  // Currency
                 { wch: 20 }  // Remarks
             ];
-            
+
             // Merge cells for headers
             detailsWs['!merges'] = [
                 { s: { r: 1, c: 1 }, e: { r: 1, c: 16 } }, // Company name
@@ -2408,18 +2442,18 @@
                 { s: { r: 3, c: 1 }, e: { r: 3, c: 16 } }, // Contact
                 { s: { r: 5, c: 1 }, e: { r: 5, c: 16 } }  // Report title
             ];
-            
+
             XLSX.utils.book_append_sheet(wb, detailsWs, 'Detailed Report');
 
             // Save the file
             const today = new Date().toISOString().slice(0, 10);
             XLSX.writeFile(wb, `GMS_Challan_Report_${today}.xlsx`);
         }
-        
+
         function resetForm() {
             // Reset form fields
             document.querySelector('#challan form').reset();
-            
+
             // Reset table
             const tableBody = document.getElementById('itemsTableBody');
             tableBody.innerHTML = `
@@ -2439,10 +2473,10 @@
                             <option value="mtr">Mtr</option>
                         </select>
                     </td>
-                    <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
-                    <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
-                    <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" onchange="calculateAmount(this)"></td>
-                    <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" onchange="calculateAmount(this)"></td>
+                    <td><input type="number" step="0.01" class="w3-input w3-border kg-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
+                    <td><input type="number" step="0.01" class="w3-input w3-border yds-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
+                    <td><input type="number" class="w3-input w3-border bag-input" placeholder="0" oninput="calculateTotal()"></td>
+                    <td><input type="number" step="0.01" class="w3-input w3-border rate-input" placeholder="0.00" oninput="calculateAmount(this)"></td>
                     <td><input type="number" step="0.01" class="w3-input w3-border amount-input" placeholder="0.00" readonly></td>
                     <td>
                         <select class="w3-select w3-border currency-select" onchange="updateRowCurrency(this)">
@@ -2455,13 +2489,13 @@
                 </tr>
             `;
             rowCounter = 1;
-            
+
             // Reset totals
             calculateTotal();
-            
+
             // Set current date
             setCurrentDate();
-            
+
             // If in edit mode, cancel it
             if (editingRecordId) {
                 cancelEdit();
@@ -2469,6 +2503,10 @@
         }
     </script>
 </body>
+</html>
+
+  </body>
+
 </html>
     
   </body>
