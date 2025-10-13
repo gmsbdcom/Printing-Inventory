@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>printing inventory1.3333</title>
+    <title>PRINTING INVENTORY 1.444</title>
     
 
   </head>
@@ -12,16 +12,6 @@
   <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Printing Inventory 1.1</title>
-
-
-  </head>
-
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1673,12 +1663,15 @@
             const firstCopy = createChallanCopy(record, 'Challan - First Copy');
             const secondCopy = createChallanCopy(record, 'Challan - Second Copy');
 
-            // Try to fit both on one page, otherwise use two pages
+            // Check if we need separate pages (8 or more items)
+            const needsSeparatePages = record.items && record.items.length >= 8;
+            
+            // Create the HTML structure with conditional page break
             printContainer.innerHTML = `
-                <div style="page-break-after: avoid;">
+                <div style="page-break-after: ${needsSeparatePages ? 'always' : 'avoid'};">
                     ${firstCopy}
                 </div>
-                <div style="page-break-before: auto; margin-top: 20px;">
+                <div style="page-break-before: ${needsSeparatePages ? 'always' : 'auto'}; margin-top: 20px;">
                     ${secondCopy}
                 </div>
             `;
@@ -2503,10 +2496,6 @@
         }
     </script>
 </body>
-</html>
-
-  </body>
-
 </html>
     
   </body>
