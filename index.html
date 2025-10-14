@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>PRINTING INVENTORY 1.444</title>
+    <title>Printing Inventory 1.5</title>
     
 
   </head>
@@ -1608,6 +1608,19 @@
 
             if (num === 0) return 'Zero';
 
+            // Split into integer and decimal parts
+            const numStr = num.toString();
+            let integerPart, decimalPart;
+            
+            if (numStr.includes('.')) {
+                const parts = numStr.split('.');
+                integerPart = parseInt(parts[0]);
+                decimalPart = parts[1];
+            } else {
+                integerPart = Math.floor(num);
+                decimalPart = null;
+            }
+
             function convertHundreds(n) {
                 let result = '';
                 if (n >= 100) {
@@ -1627,18 +1640,38 @@
                 return result;
             }
 
-            let result = '';
-            let thousandIndex = 0;
+            function convertInteger(n) {
+                if (n === 0) return '';
+                
+                let result = '';
+                let thousandIndex = 0;
 
-            while (num > 0) {
-                if (num % 1000 !== 0) {
-                    result = convertHundreds(num % 1000) + thousands[thousandIndex] + ' ' + result;
+                while (n > 0) {
+                    if (n % 1000 !== 0) {
+                        result = convertHundreds(n % 1000) + thousands[thousandIndex] + ' ' + result;
+                    }
+                    n = Math.floor(n / 1000);
+                    thousandIndex++;
                 }
-                num = Math.floor(num / 1000);
-                thousandIndex++;
+
+                return result.trim();
             }
 
-            return result.trim();
+            function convertDecimal(decimalStr) {
+                if (!decimalStr) return '';
+                
+                let result = ' Point';
+                for (let i = 0; i < decimalStr.length; i++) {
+                    const digit = parseInt(decimalStr[i]);
+                    result += ' ' + ones[digit];
+                }
+                return result;
+            }
+
+            const integerWords = convertInteger(integerPart);
+            const decimalWords = convertDecimal(decimalPart);
+            
+            return (integerWords + decimalWords).trim();
         }
 
         // Print document
@@ -1856,7 +1889,7 @@
             const currencySymbol = record.currency === 'USD' ? '$' : '৳';
             const currencyName = record.currency === 'USD' ? 'Dollars' : 'Taka';
             const totalAmount = parseFloat(record.totalAmount);
-            const amountInWords = numberToWords(Math.floor(totalAmount)) + ' ' + currencyName;
+            const amountInWords = numberToWords(totalAmount) + ' ' + currencyName;
 
             document.getElementById('printTotalAmount').textContent = `${currencySymbol}${record.totalAmount}`;
             document.getElementById('printAmountInWords').textContent = amountInWords;
