@@ -3,18 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>GMS MCD PRINTING 1.6</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Printing Inventory 1.5</title>
+    <title>PRINTING MCD .GMS 2.0</title>
     
 
   </head>
@@ -215,6 +204,13 @@
             .no-print {
                 display: none !important;
             }
+            
+            /* Ensure each bill copy takes full page */
+            .bill-copy {
+                page-break-after: always;
+                height: 100vh;
+                overflow: hidden;
+            }
         }
 
         .print-template {
@@ -385,11 +381,9 @@
     </style>
 </head>
 <body class="w3-light-grey">
-    <!-- Login Page -->
     <div id="loginPage" class="login-page">
         <div class="login-card">
             <div class="company-logo-section">
-                <!-- LOGO ADDED HERE -->
                 <img src="https://logic.gmsbd.com/platform/file_upload/company_details_1_5639_0.jpg" alt="Company Logo" style="max-width: 100px; margin-bottom: 15px;">
                 <div class="company-title">GMS COMPOSITE KNITTING IND LTD</div>
                 <div class="company-subtitle">Challan & Bill Management System</div>
@@ -423,7 +417,6 @@
         </div>
     </div>
 
-    <!-- Password Change Modal -->
     <div id="passwordModal" class="password-modal">
         <div class="password-modal-content">
             <div class="modal-title">🔑 Change Password</div>
@@ -456,7 +449,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
     <div class="w3-bar nav-gradient w3-card no-print" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: none;">
         <button onclick="showPage('home')" class="nav-link w3-bar-item w3-button w3-blue w3-hover-light-blue">
             🏠 Home
@@ -472,14 +464,11 @@
         </button>
     </div>
 
-    <!-- Page Content -->
     <div class="w3-container" style="margin-top: 60px; display: none;">
-        <!-- Home Page -->
         <div id="home" class="page-section active">
             <div class="w3-card-4 w3-white w3-round-large w3-padding-large">
                 <h1 class="w3-text-dark-grey w3-xxxlarge w3-margin-bottom">Challan & Bill Management System</h1>
 
-                <!-- Dashboard Filter Section -->
                 <div class="w3-panel w3-pale-blue w3-round w3-margin-bottom">
                     <h3 class="w3-text-blue">📊 Dashboard Filter</h3>
                     <div class="w3-row-padding">
@@ -493,7 +482,7 @@
                         </div>
                         <div class="w3-third">
                             <label class="w3-text-grey">Party Name</label>
-                            <input list="dashPartyList" type="text" id="dashPartyFilter" class="w3-input w3-border w3-round" placeholder="All parties" onchange="updateDashboard()">
+                            <input list="dashPartyList" type="text" id="dashPartyFilter" class="w3-input w3-border w3-round" placeholder="All parties" oninput="updateDashboard()">
                             <datalist id="dashPartyList"></datalist>
                         </div>
                     </div>
@@ -505,7 +494,6 @@
                     </div>
                 </div>
 
-                <!-- Dashboard Statistics -->
                 <div class="w3-row-padding w3-margin-bottom">
                     <div class="w3-quarter">
                         <div class="w3-card w3-blue w3-padding w3-round w3-center">
@@ -537,7 +525,6 @@
                     </div>
                 </div>
 
-                <!-- Top Parties Section -->
                 <div class="w3-row-padding w3-margin-bottom">
                     <div class="w3-half">
                         <div class="w3-card w3-white w3-padding w3-round">
@@ -557,7 +544,6 @@
                     </div>
                 </div>
 
-                <!-- Monthly Trend Chart -->
                 <div class="w3-card w3-white w3-padding w3-round w3-margin-bottom">
                     <h3 class="w3-text-dark-grey w3-margin-bottom">📊 Monthly Trend</h3>
                     <div id="monthlyTrendContainer">
@@ -581,7 +567,6 @@
                     </div>
                 </div>
 
-                <!-- Action Cards -->
                 <div class="w3-row-padding">
                     <div class="w3-half">
                         <div class="w3-card w3-pale-blue w3-padding w3-round">
@@ -607,7 +592,6 @@
             </div>
         </div>
 
-        <!-- Challan Creation Page -->
         <div id="challan" class="page-section">
             <div class="w3-card-4 w3-white w3-round-large w3-padding-large">
                 <div class="w3-row w3-margin-bottom">
@@ -623,7 +607,6 @@
                 </div>
 
                 <form onsubmit="handleChallanSubmit(event)" class="w3-container">
-                    <!-- Basic Information -->
                     <div class="w3-panel w3-pale-blue w3-round w3-margin-bottom">
                         <h3 class="w3-text-blue">Basic Information</h3>
                     </div>
@@ -644,7 +627,6 @@
                         </div>
                     </div>
 
-                    <!-- Party & Location Details -->
                     <div class="w3-panel w3-pale-green w3-round w3-margin-bottom">
                         <h3 class="w3-text-green">Party & Location Details</h3>
                     </div>
@@ -696,7 +678,6 @@
                         <textarea id="address" class="w3-input w3-border w3-round" rows="3" placeholder="Enter complete address"></textarea>
                     </div>
 
-                    <!-- Transport Details -->
                     <div class="w3-panel w3-pale-yellow w3-round w3-margin-bottom">
                         <h3 class="w3-text-orange">Transport Details</h3>
                     </div>
@@ -731,7 +712,6 @@
                         </div>
                     </div>
 
-                    <!-- Item Details Table -->
                     <div class="w3-panel w3-pale-red w3-round w3-margin-bottom">
                         <h3 class="w3-text-red">Item Details</h3>
                     </div>
@@ -825,14 +805,13 @@
             </div>
         </div>
 
-        <!-- Recent Records Page -->
         <div id="recent" class="page-section">
             <div class="w3-card-4 w3-white w3-round-large w3-padding-large">
                 <h1 class="w3-text-dark-grey w3-xxxlarge w3-margin-bottom">Recent Challans & Bills</h1>
 
                 <div class="w3-row-padding w3-margin-bottom">
                     <div class="w3-half">
-                        <input type="text" id="searchInput" class="w3-input w3-border w3-round" placeholder="Search by Challan No, Bill No, or Party Name..." onkeyup="filterRecords()">
+                        <input type="text" id="searchInput" class="w3-input w3-border w3-round" placeholder="Search by Challan No, Bill No, or Party Name..." oninput="filterRecords()">
                     </div>
                     <div class="w3-quarter">
                         <input type="date" id="fromDate" class="w3-input w3-border w3-round" placeholder="From Date" onchange="filterRecords()">
@@ -875,7 +854,6 @@
         </div>
     </div>
 
-    <!-- Print Template -->
     <div id="printTemplate" class="print-area" style="display: none;">
         <div class="print-template">
             <div class="company-header">
@@ -935,12 +913,7 @@
                         <td colspan="6" style="text-align: center;">GRAND TOTAL</td>
                         <td id="printTotalKg">0.00</td>
                         <td id="printTotalYds">0.00</td>
-                        <td id="printTotalBag">0</td> <!-- Bag -->
-                        <td class="rate-amount-col"></td> <!-- Rate -->
-                        <td class="rate-amount-col" id="printGrandTotalAmount"></td> <!-- Amount -->
-                        <td class="rate-amount-col"></td> <!-- Currency -->
-                        <td></td> <!-- Remarks -->
-                    </tr>
+                        <td id="printTotalBag">0</td> <td class="rate-amount-col"></td> <td class="rate-amount-col" id="printGrandTotalAmount"></td> <td class="rate-amount-col"></td> <td></td> </tr>
                 </tfoot>
             </table>
 
@@ -1275,7 +1248,7 @@
 
         function populatePartyList() {
             const partyList = document.getElementById('dashPartyList');
-            const uniqueParties = [...new Set(allRecords.map(record => record.partyName))];
+            const uniqueParties = [...new Set(allRecords.map(record => record.partyName).filter(name => name))];
 
             partyList.innerHTML = uniqueParties.map(party => `<option value="${party}">`).join('');
         }
@@ -1292,23 +1265,22 @@
 
                 // Date filter
                 if (fromDate || toDate) {
-                    const recordDate = new Date(record.date);
+                    const recordDate = new Date(record.date).setHours(0, 0, 0, 0);
 
                     if (fromDate) {
-                        const fromDateTime = new Date(fromDate);
+                        const fromDateTime = new Date(fromDate).setHours(0, 0, 0, 0);
                         matchesDate = matchesDate && recordDate >= fromDateTime;
                     }
 
                     if (toDate) {
-                        const toDateTime = new Date(toDate);
-                        toDateTime.setHours(23, 59, 59, 999);
+                        const toDateTime = new Date(toDate).setHours(0, 0, 0, 0);
                         matchesDate = matchesDate && recordDate <= toDateTime;
                     }
                 }
 
                 // Party filter
                 if (partyFilter) {
-                    matchesParty = record.partyName.toLowerCase().includes(partyFilter);
+                    matchesParty = (record.partyName || '').toLowerCase().includes(partyFilter);
                 }
 
                 return matchesDate && matchesParty;
@@ -1333,7 +1305,7 @@
                 } else if (record.currency === 'BDT') {
                     totalBDT += amount;
                 }
-                uniqueParties.add(record.partyName);
+                if(record.partyName) uniqueParties.add(record.partyName);
             });
 
             document.getElementById('totalChallans').textContent = totalChallans.toLocaleString();
@@ -1346,7 +1318,7 @@
             const partyTotals = {};
 
             dashboardData.forEach(record => {
-                const party = record.partyName;
+                const party = record.partyName || 'Unknown';
                 const amount = parseFloat(record.totalAmount) || 0;
                 const currency = record.currency;
 
@@ -1540,29 +1512,32 @@
 
         // Filter records
         function filterRecords() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const searchTerm = (document.getElementById('searchInput').value || '').toLowerCase();
             const fromDate = document.getElementById('fromDate').value;
             const toDate = document.getElementById('toDate').value;
 
-            const filteredRecords = allRecords.filter(record => {
-                // Text search filter
-                const matchesSearch = record.challanNumber.toLowerCase().includes(searchTerm) ||
-                                    record.billNumber.toLowerCase().includes(searchTerm) ||
-                                    record.partyName.toLowerCase().includes(searchTerm);
+            const filtered = allRecords.filter(record => {
+                // Text search filter (Safe check for undefined/null values)
+                const challanNo = (record.challanNumber || '').toLowerCase();
+                const billNo = (record.billNumber || '').toLowerCase();
+                const partyName = (record.partyName || '').toLowerCase();
+                
+                const matchesSearch = challanNo.includes(searchTerm) ||
+                                    billNo.includes(searchTerm) ||
+                                    partyName.includes(searchTerm);
 
                 // Date filter
                 let matchesDate = true;
                 if (fromDate || toDate) {
-                    const recordDate = new Date(record.date);
+                    const recordDate = new Date(record.date).setHours(0, 0, 0, 0);
 
                     if (fromDate) {
-                        const fromDateTime = new Date(fromDate);
+                        const fromDateTime = new Date(fromDate).setHours(0, 0, 0, 0);
                         matchesDate = matchesDate && recordDate >= fromDateTime;
                     }
 
                     if (toDate) {
-                        const toDateTime = new Date(toDate);
-                        toDateTime.setHours(23, 59, 59, 999); // Include the entire end date
+                        const toDateTime = new Date(toDate).setHours(0, 0, 0, 0);
                         matchesDate = matchesDate && recordDate <= toDateTime;
                     }
                 }
@@ -1570,7 +1545,7 @@
                 return matchesSearch && matchesDate;
             });
 
-            displayRecords(filteredRecords);
+            displayRecords(filtered);
         }
 
         // Clear date filter
@@ -1694,8 +1669,8 @@
                 // Print challan with First Copy and Second Copy
                 printChallanCopies(record);
             } else {
-                // Print single bill
-                printSingleDocument(record, type);
+                // Print bill with First Copy and Second Copy
+                printBillCopies(record);
             }
         }
 
@@ -1707,15 +1682,12 @@
             const firstCopy = createChallanCopy(record, 'Challan - First Copy');
             const secondCopy = createChallanCopy(record, 'Challan - Second Copy');
 
-            // Check if we need separate pages (8 or more items)
-            const needsSeparatePages = record.items && record.items.length >= 8;
-            
-            // Create the HTML structure with conditional page break
+            // Create HTML structure with page break
             printContainer.innerHTML = `
-                <div style="page-break-after: ${needsSeparatePages ? 'always' : 'avoid'};">
+                <div class="bill-copy">
                     ${firstCopy}
                 </div>
-                <div style="page-break-before: ${needsSeparatePages ? 'always' : 'auto'}; margin-top: 20px;">
+                <div class="bill-copy">
                     ${secondCopy}
                 </div>
             `;
@@ -1845,6 +1817,176 @@
             `;
         }
 
+        // NEW: Function to print Bill copies
+        function printBillCopies(record) {
+            const printContainer = document.getElementById('printTemplate');
+            const originalTemplate = printContainer.innerHTML;
+
+            // Create two copies
+            const firstCopy = createBillCopy(record, 'Bill First Copy');
+            const secondCopy = createBillCopy(record, 'Bill Second Copy');
+
+            // Create HTML structure with proper page breaks
+            printContainer.innerHTML = `
+                <div class="bill-copy" style="page-break-after: always; height: 100vh; overflow: hidden;">
+                    ${firstCopy}
+                </div>
+                <div class="bill-copy" style="page-break-before: always; height: 100vh; overflow: hidden;">
+                    ${secondCopy}
+                </div>
+            `;
+
+            printContainer.style.display = 'block';
+            window.print();
+            printContainer.style.display = 'none';
+
+            // Restore original template
+            printContainer.innerHTML = originalTemplate;
+        }
+
+        // NEW: Function to create Bill copy
+        function createBillCopy(record, title) {
+            // Calculate totals for bill
+            let totalKg = 0;
+            let totalYds = 0;
+            let totalBag = 0;
+            record.items.forEach(item => {
+                totalKg += parseFloat(item.kg) || 0;
+                totalYds += parseFloat(item.yds) || 0;
+                totalBag += parseInt(item.bag) || 0;
+            });
+
+            const currencySymbol = record.currency === 'USD' ? '$' : '৳';
+            const currencyName = record.currency === 'USD' ? 'Dollars' : 'Taka';
+            const totalAmount = parseFloat(record.totalAmount);
+            const amountInWords = numberToWords(totalAmount) + ' ' + currencyName;
+
+            // Create items rows
+            const itemsRows = record.items.map((item, index) => `
+                <tr>
+                    <td style="border: 1px solid #333; padding: 6px; text-align: center;">${index + 1}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.orderNo || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.colour || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.measurement || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.process || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.uom || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.kg || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.yds || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.bag || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.rate || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.amount || ''}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.currency || 'USD'}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${item.remarks || ''}</td>
+                </tr>
+            `).join('');
+
+            // Create footer HTML
+            const footerHtml = `
+            <tfoot>
+                <tr style="font-weight: bold; background-color: #f0f0f0;">
+                    <td style="border: 1px solid #333; padding: 6px; text-align: center;" colspan="6">GRAND TOTAL</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${totalKg.toFixed(2)}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${totalYds.toFixed(2)}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${totalBag}</td>
+                    <td style="border: 1px solid #333; padding: 6px;"></td>
+                    <td style="border: 1px solid #333; padding: 6px;">${currencySymbol}${record.totalAmount}</td>
+                    <td style="border: 1px solid #333; padding: 6px;">${record.currency}</td>
+                    <td style="border: 1px solid #333; padding: 6px;"></td>
+                </tr>
+            </tfoot>
+            `;
+
+            return `
+                <div style="background: white; padding: 20px; margin: 0; border: 1px solid #333; font-family: Times New Roman, sans-serif; font-size: 14px; min-height: 90vh;">
+                    <div style="text-align: center; padding-bottom: 15px; margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                            <img src="https://logic.gmsbd.com/platform/file_upload/company_details_1_5639_0.jpg" alt="Company Logo" style="max-width: 80px; height: auto; margin: 0;">
+                            <div style="text-align: left;">
+                                <h2 style="margin: 0; font-size: 20px;">GMS COMPOSITE KNITTING IND LTD</h2>
+                                <p style="margin: 5px 0 0 0; font-size: 14px;">Sardagonj, Kashimpur, Gazipur</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="font-size: 18px; font-weight: bold; text-decoration: underline; margin: 15px 0; text-align: center;">${title}</div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 15px 0; font-size: 13px;">
+                        <div>
+                            <p style="margin: 5px 0;"><strong>Challan No:</strong> ${record.challanNumber}</p>
+                            <p style="margin: 5px 0;"><strong>Bill No:</strong> ${record.billNumber}</p>
+                            <p style="margin: 5px 0;"><strong>Date:</strong> ${new Date(record.date).toLocaleDateString()}</p>
+                            <p style="margin: 5px 0;"><strong>Department:</strong> ${record.department || ''}</p>
+                        </div>
+                        <div>
+                            <p style="margin: 5px 0;"><strong>Party:</strong> ${record.partyName}</p>
+                            <p style="margin: 5px 0;"><strong>Location:</strong> ${record.location || ''}</p>
+                            <p style="margin: 5px 0;"><strong>Address:</strong> ${record.address || ''}</p>
+                            <p style="margin: 5px 0;"><strong>Currency:</strong> ${record.currency}</p>
+                        </div>
+                        <div>
+                            <p style="margin: 5px 0;"><strong>Gate Pass No:</strong> ${record.gatePassNo || ''}</p>
+                            <p style="margin: 5px 0;"><strong>Transport No:</strong> ${record.transportNo || ''}</p>
+                            <p style="margin: 5px 0;"><strong>Driver:</strong> ${record.driverName || ''}</p>
+                        </div>
+                    </div>
+
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 12px;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">SL</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Order No</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Colour</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Measurement</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Process</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">UoM</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Kg</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Yds</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Bag</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Rate</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Amount</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Currency</th>
+                                <th style="border: 1px solid #333; padding: 8px; background-color: #f0f0f0; font-weight: bold;">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${itemsRows}
+                        </tbody>
+                        ${footerHtml}
+                    </table>
+
+                    <div style="text-align: right; margin: 15px 0; font-size: 13px;">
+                        <p style="margin: 5px 0;"><strong>Total Amount: ${currencySymbol}${record.totalAmount}</strong></p>
+                    </div>
+
+                    <div style="margin: 15px 0; font-size: 12px;">
+                        <p style="margin: 5px 0;"><strong>Amount In Words:</strong> ${amountInWords}</p>
+                    </div>
+
+                    <div style="font-size: 12px; margin: 15px 0;">
+                        <p style="margin: 5px 0;"><strong>Item Description:</strong> ${record.itemDescription || ''}</p>
+                        <p style="margin: 5px 0;"><strong>Challan Details:</strong> ${record.challanDetails || ''}</p>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 30px; padding-top: 15px;">
+                        <div style="text-align: center; width: 18%;">
+                            <div style="margin-top: 40px; font-size: 11px; padding-top: 8px; border-top: 1px solid #333;">Prepared by</div>
+                        </div>
+                        <div style="text-align: center; width: 18%;">
+                            <div style="margin-top: 40px; font-size: 11px; padding-top: 8px; border-top: 1px solid #333;">Receiver's Signature</div>
+                        </div>
+                        <div style="text-align: center; width: 18%;">
+                            <div style="margin-top: 40px; font-size: 11px; padding-top: 8px; border-top: 1px solid #333;">Checked by</div>
+                        </div>
+                        <div style="text-align: center; width: 18%;">
+                            <div style="margin-top: 40px; font-size: 11px; padding-top: 8px; border-top: 1px solid #333;">AGM MCD</div>
+                        </div>
+                        <div style="text-align: center; width: 18%;">
+                            <div style="margin-top: 40px; font-size: 11px; padding-top: 8px; border-top: 1px solid #333;">Approved by</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
 
         function printSingleDocument(record, type) {
             // Populate print template for bill
@@ -1883,7 +2025,7 @@
                 </tr>
             `).join('');
 
-            // FIXED: Calculate and populate footer for the bill
+            // FIXED: Calculate and populate footer for bill
             let totalKg = 0;
             let totalYds = 0;
             let totalBag = 0;
@@ -1914,7 +2056,7 @@
             // Show amount in words section for bill
             document.getElementById('amountInWordsSection').style.display = 'block';
 
-            // Hide the old total amount paragraph since it's now in the table footer
+            // Hide old total amount paragraph since it's now in the table footer
             const oldTotalAmountP = document.querySelector('#printTemplate .rate-amount-col strong').parentElement;
             oldTotalAmountP.style.display = 'none';
 
@@ -1923,7 +2065,7 @@
             window.print();
             document.getElementById('printTemplate').style.display = 'none';
 
-            // Restore the display of the old total amount paragraph
+            // Restore display of old total amount paragraph
             oldTotalAmountP.style.display = 'block';
         }
 
@@ -2211,7 +2353,6 @@
             calculateTotal();
         }
 
-
         function calculateTotal() {
             const amountInputs = document.querySelectorAll('.amount-input');
             const kgInputs = document.querySelectorAll('.kg-input');
@@ -2244,7 +2385,6 @@
             document.getElementById('totalYds').textContent = totalYds.toFixed(2);
             document.getElementById('totalBag').textContent = totalBag; // Display total bags
         }
-
 
         function updateCurrency() {
             const currencySelect = document.getElementById('currencySelect');
@@ -2318,6 +2458,7 @@
                         record.billNumber,
                         record.partyName,
                         new Date(record.date).toLocaleDateString('en-GB'),
+                        '-',
                         '-',
                         '-',
                         '-',
@@ -2540,10 +2681,6 @@
         }
     </script>
 </body>
-</html>
-    
-  </body>
-  
 </html>
     
   </body>
